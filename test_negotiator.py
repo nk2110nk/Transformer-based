@@ -125,9 +125,9 @@ def test_trained(config):
     domain = scenario.issues
     
     # !!!この部分を変更する!!!
-    util1 = scenario.ufuns[2].scale_max(1.0)
+    util1 = scenario.ufuns[0].scale_max(1.0)
     util2 = scenario.ufuns[1].scale_max(1.0)
-    util3 = scenario.ufuns[0].scale_max(1.0) # 変更箇所
+    util3 = scenario.ufuns[2].scale_max(1.0) # 変更箇所
     
     for _ in tqdm(range(1 if PLOT else 100)):
         result = run_session_trained(f'{LOAD_PATH}/checkpoint.pt', save_path, agent, issue, domain, util1, util2, util3, det, noise, decoder_only, scale, decoder_num, is_first) # 変更箇所

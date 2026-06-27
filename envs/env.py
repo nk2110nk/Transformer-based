@@ -28,9 +28,9 @@ class NaiveEnv(gym.Env):
         self.issues = scenario.issues
         
         # !!!この部分を変更する!!!
-        self.util1 = scenario.ufuns[2]
+        self.util1 = scenario.ufuns[0]
         self.util2 = scenario.ufuns[1]
-        self.util3 = scenario.ufuns[0] # 変更箇所
+        self.util3 = scenario.ufuns[2] # 変更箇所
 
         self.my_agent: Optional[RLNegotiator] = None
         self.session: Optional[MySAOMechanism] = None
